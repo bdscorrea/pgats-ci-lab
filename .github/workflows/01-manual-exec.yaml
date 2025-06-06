@@ -17,10 +17,10 @@ jobs:
   #passos do script de build
   steps:
   #clone do projeto
-  - users: actions/checkout@v4
+  - uses: actions/checkout@v4
 
   #instalação do node
-  - users: actions/setup-node@v4
+  - uses: actions/setup-node@v4
     with:
       node-version: 22.x
 
