@@ -48,3 +48,10 @@ jobs:
       # executar os testes e2e
       - name: Executando Testes e2e
         run: yarn run e2e
+
+      #
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: report
+          path: ./playwrith-report
